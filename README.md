@@ -14,7 +14,7 @@ A modern, responsive portfolio website built with HTML, Tailwind CSS, and JavaSc
 
 ## Live Demo
 
-[View Live Portfolio](https://sujitchy.github.io/portfolio)
+[View Live Portfolio](https://sujitchy.github.io/sujitchy)
 
 ## Local Development
 
