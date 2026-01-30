@@ -1,16 +1,23 @@
 ## Hi there 👋
 
-<!--
-**Sujitchy/sujitchy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Portfolio Website
 
-Here are some ideas to get you started:
+A modern, responsive portfolio website built with HTML, Tailwind CSS, and JavaScript.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Features
+
+- 🌙 **Dark Mode Toggle**
+- 📱 **Mobile-First Responsive Design**
+- 🚀 **Smooth Scroll Animations**
+- ⚡ **Modern UI with Tailwind CSS**
+- 🌐 **GitHub Pages Ready**
+
+## Live Demo
+
+[View Live Portfolio](https://sujitchy.github.io/portfolio)
+
+## Local Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/sujitchy/sujitchy.git
