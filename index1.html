@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujit Chauddhhari | Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+
+        .dark .theme-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* Custom animations */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Mobile menu animation */
+        .mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #60a5fa;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 font-inter transition-colors duration-300">
+    <nav class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                        <img src="images/logo.png" alt="S C" class="h-8 w-8 inline-block mr-2">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                    <a href="#about" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                    <a href="#skills" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
+                    <a href="#education" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Education</a>
+                    <a href="#projects" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+                    <a href="#blog" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Blog</a>
+                    <a href="#contact" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+
+                    <button id="themeToggle" class="theme-toggle p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400"></i>
+                    </button>
+                </div>
+
+                <button id="mobileMenuButton" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                    <i class="fas fa-bars text-gray-600 dark:text-gray-300"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu md:hidden hidden bg-white dark:bg-gray-800 shadow-lg">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#home" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                <a href="#about" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                <a href="#skills" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
+                <a href="#education" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">Education</a>
+                <a href="#projects" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+                <a href="#blog" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">Blog</a>
+                <a href="#contact" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+                <button id="themeToggleMobile" class="theme-toggle p-2 rounded-lg bg-gray-100 dark:bg-gray-700 w-full">
+                    <i class="fas fa-moon text-gray-600 dark:text-yellow-400"></i> Toggle Theme
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="min-h-screen pt-20 flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                        Hello, I'm <span class="text-orange-500">Sujit</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-blue-600 dark:text-blue-400 mb-6">
+                        Aspiring Web Developer
+                    </h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                        Pre-Diploma in IT student passionate about creating beautiful, functional websites.
+                        Welcome to my interactive portfolio!
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact"
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105">
+                            Get In Touch
+                        </a>
+                        <a href="#projects"
+                            class="border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 px-8 py-3 rounded-lg font-semibold transition-all">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="flex justify-center">
+                    <div class="relative">
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-2xl float-animation">
+                            <img src="images/aboutmeimg.png" alt="Sujit Chauddhhari" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-orange-500 text-white p-4 rounded-lg shadow-lg">
+                            <div class="text-center">
+                                <p class="font-bold">Pre-Diploma in</p>
+                                <p class="text-sm">IT Student</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="rounded-lg overflow-hidden shadow-2xl">
+                        <img src="images/web-dev.jpg" alt="About Me" class="w-full h-64 md:h-96 object-cover">
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-3xl font-bold mb-6 text-blue-600 dark:text-blue-400">Passionate Web Developer</h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                        I am a Pre-Diploma in IT student with a strong passion for web development.
+                        I enjoy creating responsive, user-friendly websites using modern technologies.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-graduation-cap text-orange-500 mr-3"></i>
+                            <p>Currently pursuing Pre-Diploma in Information Technology</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-laptop-code text-orange-500 mr-3"></i>
+                            <p>Specializing in front-end web development</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-bullseye text-orange-500 mr-3"></i>
+                            <p>Goal: Become a full-stack web developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">Skills</h2>
+            <p class="text-center text-gray-600 dark:text-gray-400 mb-12" data-aos="fade-up" data-aos-delay="100">
+                Building responsive, clean, and user-friendly web experiences
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Skill Cards -->
+                <div data-aos="zoom-in" data-aos-delay="200"
+                    class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 dark:text-blue-400 text-4xl mb-4">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">HTML5</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Semantic markup & structure</p>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="300"
+                    class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 dark:text-blue-400 text-4xl mb-4">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">CSS3</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Modern styling & animations</p>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="400"
+                    class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 dark:text-blue-400 text-4xl mb-4">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">JavaScript</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Interactive functionality</p>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="500"
+                    class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 dark:text-blue-400 text-4xl mb-4">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">WordPress</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Theme development & customization</p>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="600"
+                    class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 dark:text-blue-400 text-4xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Responsive Design</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Mobile-first approach</p>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="700"
+                    class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 dark:text-blue-400 text-4xl mb-4">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Git & GitHub</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Version control & collaboration</p>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="800"
+                    class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 dark:text-blue-400 text-4xl mb-4">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">UI/UX Design</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">User-centered design</p>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="900"
+                    class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 dark:text-blue-400 text-4xl mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Tailwind CSS</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Utility-first CSS framework</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Education</h2>
+            <div class="max-w-3xl mx-auto">
+                <div data-aos="fade-up"
+                    class="education-card bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl shadow-lg border-l-4 border-blue-600">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded-lg mr-6">
+                            <i class="fas fa-graduation-cap text-blue-600 dark:text-blue-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Pre-Diploma in Information Technology</h3>
+                            <p class="text-orange-500 font-semibold mb-2">Currently Studying</p>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                <i class="fas fa-university mr-2"></i>
+                                Shree Sharada Secondary School, Baiyabehadi-2, Dhangadhi
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                Expected Graduation: 2027
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">Projects</h2>
+            <p class="text-center text-gray-600 dark:text-gray-400 mb-12" data-aos="fade-up" data-aos-delay="100">
+                Here are some of my featured projects
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div data-aos="flip-left"
+                    class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="p-6">
+                        <div
+                            class="bg-blue-100 dark:bg-blue-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-briefcase text-blue-600 dark:text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Personal Portfolio</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Responsive portfolio website built with HTML, CSS, and JavaScript featuring dark mode.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full text-sm">
+                                HTML5
+                            </span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full text-sm">
+                                CSS3
+                            </span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full text-sm">
+                                JavaScript
+                            </span>
+                        </div>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+                            View Project →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div data-aos="flip-left" data-aos-delay="200"
+                    class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="p-6">
+                        <div
+                            class="bg-orange-100 dark:bg-orange-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-newspaper text-orange-600 dark:text-orange-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">News Website</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Custom WordPress theme for news publication with responsive design and SEO optimization.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400 rounded-full text-sm">
+                                WordPress
+                            </span>
+                            <span
+                                class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400 rounded-full text-sm">
+                                PHP
+                            </span>
+                            <span
+                                class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400 rounded-full text-sm">
+                                JavaScript
+                            </span>
+                        </div>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+                            View Project →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div data-aos="flip-left" data-aos-delay="400"
+                    class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="p-6">
+                        <div
+                            class="bg-green-100 dark:bg-green-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-shopping-cart text-green-600 dark:text-green-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">E-commerce Template</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Modern e-commerce template with product filtering, cart functionality, and checkout process.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-full text-sm">
+                                HTML/CSS
+                            </span>
+                            <span
+                                class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-full text-sm">
+                                JavaScript
+                            </span>
+                            <span
+                                class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-full text-sm">
+                                Bootstrap
+                            </span>
+                        </div>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+                            View Project →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">Blog & Articles</h2>
+            <p class="text-center text-gray-600 dark:text-gray-400 mb-12" data-aos="fade-up" data-aos-delay="100">
+                Sharing knowledge and experiences
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog 1 -->
+                <article data-aos="fade-up" data-aos-delay="200"
+                    class="blog-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Web Development Journey"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full">
+                                Web Development
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>Mar 15, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">My Journey into Web Development</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Sharing my experiences and challenges as I learn web development from scratch.
+                        </p>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog 2 -->
+                <article data-aos="fade-up" data-aos-delay="400"
+                    class="blog-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="HTML & CSS Tips"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                            <span
+                                class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-full">
+                                HTML/CSS
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>Feb 28, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Top HTML & CSS Tips for Beginners</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Essential tips to help beginners get started with web design and development.
+                        </p>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog 3 -->
+                <article data-aos="fade-up" data-aos-delay="600"
+                    class="blog-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/responsive.jpg" alt="Responsive Design"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                            <span
+                                class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400 rounded-full">
+                                Responsive
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>Feb 10, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Understanding Responsive Design</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            A comprehensive guide to making websites look great on all devices and screen sizes.
+                        </p>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact"
+        class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Get In Touch</h2>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-8">Let's Discuss Your Project</h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                        Feel free to reach out to discuss opportunities, collaborations, or just to say hello!
+                    </p>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center">
+                            <div
+                                class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-blue-600 dark:text-blue-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p class="text-gray-600 dark:text-gray-400">sujitchy919@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div
+                                class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-green-600 dark:text-green-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Phone</p>
+                                <p class="text-gray-600 dark:text-gray-400">+977 9741885222</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div
+                                class="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-orange-600 dark:text-orange-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Location</p>
+                                <p class="text-gray-600 dark:text-gray-400">Dhangadhi, Nepal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div>
+                        <h4 class="font-semibold mb-4">Connect with me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/sujitchy09" target="_blank"
+                                class="social-icon w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white transition-all hover:scale-110">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sujit-chy-0578173a9/" target="_blank"
+                                class="social-icon w-12 h-12 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition-all hover:scale-110">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/Sujitchy" target="_blank"
+                                class="social-icon w-12 h-12 bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-800 rounded-full flex items-center justify-center text-white transition-all hover:scale-110">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" target="_blank"
+                                class="social-icon w-12 h-12 bg-red-500 hover:bg-red-600 rounded-full flex items-center justify-center text-white transition-all hover:scale-110">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div data-aos="fade-left">
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl">
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Your Name</label>
+                                <input type="text" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 outline-none transition">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email Address</label>
+                                <input type="email" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 outline-none transition">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Subject</label>
+                                <input type="text" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 outline-none transition">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Message</label>
+                                <textarea rows="5" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 outline-none transition resize-none"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all hover:scale-[1.02] active:scale-[0.98]">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Sujit Chauddhhari</h3>
+                    <p class="text-gray-400">Aspiring Web Developer & IT Student</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="#home" class="text-gray-400 hover:text-white transition">Home</a>
+                        <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
+                        <a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a>
+                        <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-400">
+                            <i class="fas fa-envelope mr-2"></i>
+                            sujitchy919@gmail.com
+                        </p>
+                        <p class="text-gray-400">
+                            <i class="fas fa-phone mr-2"></i>
+                            +977 9741885222
+                        </p>
+                        <p class="text-gray-400">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Dhangadhi, Nepal
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2024 Sujit Chauddhhari. All rights reserved.
+                </p>
+                <p class="text-gray-400 text-sm mt-2">
+                    Made with ❤️ using HTML, CSS, and JavaScript
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 hover:scale-110">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeToggleMobile = document.getElementById('themeToggleMobile');
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const backToTop = document.getElementById('backToTop');
+        const contactForm = document.getElementById('contactForm');
+
+        // Theme toggle function
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            const icon = themeToggle.querySelector('i');
+            if (document.documentElement.classList.contains('dark')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Initialize theme
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+            const icon = themeToggle.querySelector('i');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+
+        // Theme toggle events
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+
+        // Mobile menu toggle
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Back to top button
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.style.opacity = '1';
+                backToTop.style.pointerEvents = 'auto';
+            } else {
+                backToTop.style.opacity = '0';
+                backToTop.style.pointerEvents = 'none';
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Form submission
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add active class to nav links on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-600', 'dark:text-blue-400');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('text-blue-600', 'dark:text-blue-400');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
