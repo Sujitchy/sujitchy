@@ -6,7 +6,6 @@ A modern, responsive portfolio website built with HTML, Tailwind CSS, and JavaSc
 
 ## Features
 
-- 🌙 **Dark Mode Toggle**
 - 📱 **Mobile-First Responsive Design**
 - 🚀 **Smooth Scroll Animations**
 - ⚡ **Modern UI with Tailwind CSS**
