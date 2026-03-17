@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sujit Chauddhhari | Portfolio</title>
+    <title>Sujit Chaudhary | Portfolio</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
@@ -77,7 +77,7 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <a href="#home" class="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                        <img src="images/logo.png" alt="S C" class="h-8 w-8 inline-block mr-2">
+                        <img src="images/logo.png" alt="S C" class="h-10 w-10 inline-block mr-2">
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
@@ -345,7 +345,7 @@
                                 JavaScript
                             </span>
                         </div>
-                        <a href="#" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+                        <a href="project.html" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
                             View Project →
                         </a>
                     </div>
@@ -362,6 +362,7 @@
                         <h3 class="text-xl font-bold mb-3">News Website</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-4">
                             Custom WordPress theme for news publication with responsive design and SEO optimization.
+                            Modern News template with responsive design, built using HTML, CSS, PHP and Tailwind CSS.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
@@ -377,7 +378,7 @@
                                 JavaScript
                             </span>
                         </div>
-                        <a href="#" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+                        <a href="project.html" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
                             View Project →
                         </a>
                     </div>
@@ -391,9 +392,10 @@
                             class="bg-green-100 dark:bg-green-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                             <i class="fas fa-shopping-cart text-green-600 dark:text-green-400 text-xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">E-commerce Template</h3>
+                        <h3 class="text-xl font-bold mb-3">Cooperative Template</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            Modern e-commerce template with product filtering, cart functionality, and checkout process.
+                            Custom WordPress theme for cooperative websites. Modern cooperative template with responsive
+                            design, built using HTML, CSS, PHP and Tailwind CSS.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
@@ -402,14 +404,14 @@
                             </span>
                             <span
                                 class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-full text-sm">
-                                JavaScript
+                                JavaScript/PHP
                             </span>
                             <span
                                 class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-full text-sm">
-                                Bootstrap
+                                Tailwind CSS
                             </span>
                         </div>
-                        <a href="#" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+                        <a href="project.html" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
                             View Project →
                         </a>
                     </div>
@@ -627,7 +629,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">Sujit Chauddhhari</h3>
+                    <h3 class="text-2xl font-bold mb-4">Sujit Chaudhary</h3>
                     <p class="text-gray-400">Aspiring Web Developer & IT Student</p>
                 </div>
 
@@ -662,12 +664,13 @@
 
             <div class="border-t border-gray-700 pt-8 text-center">
                 <p class="text-gray-400">
-                    &copy; 2024 Sujit Chauddhhari. All rights reserved.
+                    &copy; <span id="currentYear"></span> Sujit Chaudhary. All rights reserved.
                 </p>
                 <p class="text-gray-400 text-sm mt-2">
                     Made with ❤️ using HTML, CSS, and JavaScript
                 </p>
             </div>
+
         </div>
     </footer>
 
@@ -680,6 +683,7 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+
         // Initialize AOS
         AOS.init({
             duration: 800,
@@ -804,10 +808,11 @@
                 }
             });
         });
+
+        // Auto-update copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
 
 
 </html>
-
-

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujit Chaudhary | Projects</title>
+    <!-- Tailwind, Font Awesome, AOS, Google Fonts (same as original) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+
+        .dark .theme-toggle {
+            transform: rotate(180deg);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-10px)
+            }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #60a5fa;
+        }
+
+        /* small tweak for project grid */
+        .project-card {
+            transition: all 0.25s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 font-inter transition-colors duration-300">
+
+    <!-- ========== NAV (exact copy from original, but logo & brand kept) ========== -->
+    <nav class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                        <img src="images/logo.png" alt="S C" class="h-8 w-8 inline-block mr-2">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                    <a href="#about" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                    <a href="#skills" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
+                    <a href="#education" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Education</a>
+                    <a href="#projects" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+                    <a href="#blog" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Blog</a>
+                    <a href="#contact" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+                    <button id="themeToggle" class="theme-toggle p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400"></i>
+                    </button>
+                </div>
+                <button id="mobileMenuButton" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                    <i class="fas fa-bars text-gray-600 dark:text-gray-300"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu md:hidden hidden bg-white dark:bg-gray-800 shadow-lg">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                <a href="#about" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                <a href="#skills" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
+                <a href="#education" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">Education</a>
+                <a href="#projects" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+                <a href="#blog" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">Blog</a>
+                <a href="#contact" class="block nav-link hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+                <button id="themeToggleMobile"
+                    class="theme-toggle p-2 rounded-lg bg-gray-100 dark:bg-gray-700 w-full"><i
+                        class="fas fa-moon text-gray-600 dark:text-yellow-400"></i> Toggle Theme</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO (minimal to keep flow, just a short intro before projects) ========== -->
+    <section id="home"
+        class="pt-24 pb-12 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-down">Projects · one passion</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto" data-aos="fade-up"
+                data-aos-delay="100">
+                From interactive dashboards to full‑stack clones — each project taught me something new.
+            </p>
+            <div class="mt-8 flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="150">
+                <a href="#projects"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105">🎯
+                    See all projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION – 10 ITEMS (expanded & diverse) ========== -->
+    <section id="projects" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">🧩 Projects I’ve built.</h2>
+            <p class="text-center text-gray-600 dark:text-gray-400 mb-12" data-aos="fade-up" data-aos-delay="100">
+                Real projects — from small utilities to complex interfaces
+            </p>
+
+            <!-- grid: 2 cols on mobile, 3 on md, 4 on lg? we use md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 but keep 3 first, then 4 for large screens to show 10 nicely. 10 cards: row1 (4), row2 (4), row3 (2) -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                <!-- project 1 - personal portfolio (already in original but we keep it) -->
+                <div data-aos="flip-left"
+                    class="project-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div
+                            class="bg-blue-100 dark:bg-blue-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-briefcase text-blue-600 dark:text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Personal portfolio v2</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-1">Minimalist portfolio with dark
+                            mode, AOS, and smooth scroll. Fully responsive.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="px-2 py-0.5 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full text-xs">HTML</span>
+                            <span
+                                class="px-2 py-0.5 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full text-xs">Tailwind</span>
+                            <span
+                                class="px-2 py-0.5 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full text-xs">JS</span>
+                        </div>
+                        <a href="https://sujitc.netlify.app/"
+                            class="text-blue-600 dark:text-blue-400 font-semibold hover:underline text-sm mt-auto">live
+                            demo →</a>
+                    </div>
+                </div>
+
+                <!-- project 2 - news theme (WordPress) from original, but rename slightly -->
+                <div data-aos="flip-left" data-aos-delay="50"
+                    class="project-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div
+                            class="bg-orange-100 dark:bg-orange-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-newspaper text-orange-600 dark:text-orange-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">News Website</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-1">Custom WordPress theme for local
+                            news. Category layouts, widget areas, SEO friendly.  Modern News template with responsive design, built using HTML, CSS, PHP and Tailwind CSS.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="px-2 py-0.5 bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400 rounded-full text-xs">PHP</span>
+                            <span
+                                class="px-2 py-0.5 bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400 rounded-full text-xs">WP</span>
+                            <span
+                                class="px-2 py-0.5 bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400 rounded-full text-xs">JS</span>
+                        </div>
+                        <a href="https://neplinekhabar.com/" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline text-sm">case
+                            study →</a>
+                    </div>
+                </div>
+
+                <!-- project 3 - Cooperative template  -->
+               <div data-aos="flip-left" data-aos-delay="100"
+                    class="project-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div
+                            class="bg-green-100 dark:bg-green-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-shopping-cart text-green-600 dark:text-green-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Cooperative Template</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-1"> Custom WordPress Theme for cooperative websites. Modern cooperative template with responsive design, built using HTML, CSS, PHP and Tailwind CSS.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="px-2 py-0.5 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-full text-xs">HTML/CSS</span>
+                            <span
+                                class="px-2 py-0.5 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-full text-xs">JS/PHP</span>
+                        </div>
+                        <a href="https://gacaf.org.np/"
+                            class="text-blue-600 dark:text-blue-400 font-semibold hover:underline text-sm">preview →</a>
+                    </div>
+                </div>
+
+                <!-- project 4 - new: weather dashboard -->
+                <!-- <div data-aos="flip-left" data-aos-delay="150"
+                    class="project-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div
+                            class="bg-cyan-100 dark:bg-cyan-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-cloud-sun text-cyan-600 dark:text-cyan-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">WeatherPulse</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-1">Real-time weather app using
+                            OpenWeather API. Search by city, 5‑day forecast.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="px-2 py-0.5 bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-400 rounded-full text-xs">API</span>
+                            <span
+                                class="px-2 py-0.5 bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-400 rounded-full text-xs">JS</span>
+                        </div>
+                        <a href="#"
+                            class="text-blue-600 dark:text-blue-400 font-semibold hover:underline text-sm">demo</a>
+                    </div>
+                </div> -->
+
+                <!-- project 5 - task manager (new) -->
+                <!-- <div data-aos="flip-left" data-aos-delay="200"
+                    class="project-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div
+                            class="bg-purple-100 dark:bg-purple-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-check-circle text-purple-600 dark:text-purple-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">DoIt! task manager</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-1">Kanban‑style board: drag & drop
+                            tasks, local storage, dark/light mode.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="px-2 py-0.5 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400 rounded-full text-xs">HTML5</span>
+                            <span
+                                class="px-2 py-0.5 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400 rounded-full text-xs">CSS</span>
+                            <span
+                                class="px-2 py-0.5 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400 rounded-full text-xs">JS</span>
+                        </div>
+                        <a href="#"
+                            class="text-blue-600 dark:text-blue-400 font-semibold hover:underline text-sm">repo</a>
+                    </div>
+                </div> -->
+
+                <!-- project 6 - Quiz app -->
+                <!-- <div data-aos="flip-left" data-aos-delay="250"
+                    class="project-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div
+                            class="bg-yellow-100 dark:bg-yellow-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-question-circle text-yellow-600 dark:text-yellow-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Quizzy · trivia game</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-1">10 questions, score tracking,
+                            timer. Built with vanilla JS and trivia API.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="px-2 py-0.5 bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-400 rounded-full text-xs">API</span>
+                            <span
+                                class="px-2 py-0.5 bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-400 rounded-full text-xs">JS</span>
+                        </div>
+                        <a href="#"
+                            class="text-blue-600 dark:text-blue-400 font-semibold hover:underline text-sm">play</a>
+                    </div>
+                </div> -->
+
+                <!-- project 7 - URL shortener (full‑stack like) -->
+                <!-- <div data-aos="flip-left" data-aos-delay="300"
+                    class="project-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div
+                            class="bg-red-100 dark:bg-red-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-link text-red-600 dark:text-red-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Shrtnr (URL shortener)</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-1">Node.js + Express + MongoDB
+                            (deployed). Shortens links with custom alias.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="px-2 py-0.5 bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-400 rounded-full text-xs">Node</span>
+                            <span
+                                class="px-2 py-0.5 bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-400 rounded-full text-xs">Mongo</span>
+                        </div>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline text-sm">try
+                            it</a>
+                    </div>
+                </div> -->
+
+                <!-- project 8 - Cryptocurrency dashboard -->
+                <!-- <div data-aos="flip-left" data-aos-delay="350"
+                    class="project-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div
+                            class="bg-indigo-100 dark:bg-indigo-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fab fa-bitcoin text-indigo-600 dark:text-indigo-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">CryptoView</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-1">Live prices, charts (Chart.js),
+                            market cap. Data from CoinGecko API.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="px-2 py-0.5 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 rounded-full text-xs">API</span>
+                            <span
+                                class="px-2 py-0.5 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 rounded-full text-xs">Chart.js</span>
+                        </div>
+                        <a href="#"
+                            class="text-blue-600 dark:text-blue-400 font-semibold hover:underline text-sm">charts</a>
+                    </div>
+                </div> -->
+
+                <!-- project 9 - Recipe finder (new) -->
+                <!-- <div data-aos="flip-left" data-aos-delay="400"
+                    class="project-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div
+                            class="bg-pink-100 dark:bg-pink-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-utensils text-pink-600 dark:text-pink-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Recipe Radar</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-1">Search meals by ingredient, get
+                            instructions + video. Spoonacular API.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="px-2 py-0.5 bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 rounded-full text-xs">fetch</span>
+                            <span
+                                class="px-2 py-0.5 bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 rounded-full text-xs">CSS</span>
+                        </div>
+                        <a href="#"
+                            class="text-blue-600 dark:text-blue-400 font-semibold hover:underline text-sm">cook</a>
+                    </div>
+                </div> -->
+
+                <!-- project 10 - Markdown blog (like a dev.to clone) -->
+                <!-- <div data-aos="flip-left" data-aos-delay="450"
+                    class="project-card bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div
+                            class="bg-teal-100 dark:bg-teal-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-blog text-teal-600 dark:text-teal-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">mdBlog · markdown cms</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-1">Simple Node.js blog that parses
+                            .md files. EJS, syntax highlighting.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="px-2 py-0.5 bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-400 rounded-full text-xs">Node</span>
+                            <span
+                                class="px-2 py-0.5 bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-400 rounded-full text-xs">Express</span>
+                        </div>
+                        <a href="#"
+                            class="text-blue-600 dark:text-blue-400 font-semibold hover:underline text-sm">read</a>
+                    </div>
+                </div> -->
+
+            </div> <!-- end grid -->
+
+            <!-- extra note: all 10 projects are listed, some links placeholders -->
+            <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-12 italic" data-aos="fade-up">+ many more
+                small experiments on GitHub. each link leads to live demo or repository.</p>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Sujit Chaudhary</h3>
+                    <p class="text-gray-400">Aspiring Web Developer & IT Student</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="#home" class="text-gray-400 hover:text-white transition">Home</a>
+                        <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
+                        <a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a>
+                        <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-400">
+                            <i class="fas fa-envelope mr-2"></i>
+                            sujitchy919@gmail.com
+                        </p>
+                        <p class="text-gray-400">
+                            <i class="fas fa-phone mr-2"></i>
+                            +977 9741885222
+                        </p>
+                        <p class="text-gray-400">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Dhangadhi, Nepal
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2024 Sujit Chaudhary. All rights reserved.
+                </p>
+                <p class="text-gray-400 text-sm mt-2">
+                    Made with ❤️ using HTML, CSS, and JavaScript
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- back to top (same as original) -->
+    <button id="backToTop"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 hover:scale-110"><i
+            class="fas fa-arrow-up"></i></button>
+
+    <!-- scripts (AOS + theme + mobile + back to top exactly as original, but simplified a bit) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        // theme toggle (copied from original logic)
+        const themeToggle = document.getElementById('themeToggle');
+        const themeToggleMobile = document.getElementById('themeToggleMobile');
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const backToTop = document.getElementById('backToTop');
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            const icon = themeToggle.querySelector('i');
+            if (document.documentElement.classList.contains('dark')) {
+                icon.classList.remove('fa-moon'); icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.remove('fa-sun'); icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+            themeToggle.querySelector('i').classList.remove('fa-moon'); themeToggle.querySelector('i').classList.add('fa-sun');
+        }
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            backToTop.style.opacity = window.pageYOffset > 300 ? '1' : '0';
+            backToTop.style.pointerEvents = window.pageYOffset > 300 ? 'auto' : 'none';
+        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const id = this.getAttribute('href');
+                if (id === '#') return;
+                const el = document.querySelector(id);
+                if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>
