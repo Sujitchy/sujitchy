@@ -1,48 +1,54 @@
-👋 Hi, I'm Sujit Chaudhary
-🎓 IT Professional | 💻 Full-Stack Web Developer | 📱 Mobile App Enthusiast
-🌏 Based in Dhangadhi, Nepal. Passionate about building scalable web ecosystems and exploring the intersection of design and functionality.
+# 👋 Hi, I'm Sujit Chaudhary 
+### Full-Stack Web Developer | IT Professional | Mobile App Enthusiast
 
-🚀 About Me
-🎯 Specialization: Full-stack web development focusing on Laravel, PHP, and WordPress.
+<p align="left">
+  <img src="https://img.shields.io/badge/Location-Dhangadhi,%20Nepal-blue?style=flat-square&logo=googlemaps" alt="Location">
+  <img src="https://img.shields.io/badge/Status-Open%20to%20Projects-green?style=flat-square" alt="Status">
+</p>
 
-⚡ Frontend & Design: Expert in crafting responsive UIs with Tailwind CSS and designing brand assets using Adobe Photoshop.
+---
 
-📱 Mobile Development: Actively building and learning cross-platform apps with React Native.
+### ⚡ About Me
+I am a passionate developer dedicated to building scalable web ecosystems and exploring the intersection of clean design and complex logic.
 
-💡 Interests: Interested in financial markets, stock analysis.
+* 🎯 **Specialization:** Full-stack development with **Laravel, PHP, and WordPress**.
+* 📱 **Mobile:** Actively architecting cross-platform apps using **React Native**.
+* 🎨 **Design:** Crafting responsive UIs with **Tailwind CSS** and brand assets in **Adobe Photoshop**.
+* 💡 **Interests:** Financial markets, stock analysis, and performance optimization.
 
-🌱 Currently Learning: Advanced backend optimization and mobile environment architecture.
+---
 
-🛠 Tech Stack
-Frontend & Mobile
+### 🛠 Tech Stack
 
-Web: React.js, Tailwind CSS, Bootstrap, jQuery
+| Category | Tools & Technologies |
+| :--- | :--- |
+| **Frontend** | React.js, Tailwind CSS, Bootstrap, jQuery |
+| **Backend** | PHP, Laravel, WordPress (Custom Themes) |
+| **Mobile** | React Native, Flutter (Learning) |
+| **Database** | MySQL, Firebase |
+| **Design** | Adobe Photoshop, Canva |
+| **Dev Ops** | Git, GitHub, VS Code, Composer, npm |
 
-Mobile: React Native
+---
 
-Backend & Database
+### 📂 Featured Projects
 
-Languages/Frameworks: PHP, Laravel, WordPress (Custom Theme Development)
+* 🏔️ **TravelSathi:** A tourism and trekking platform for the Nepal Himalayas.
+* 🍾 **KTM Online Liquor:** E-commerce solution with live tracking and SEO focus.
+* 📰 **NewsPik:** A custom WordPress-based news and media portal.
 
-Database: MySQL.
+---
 
-Design & Tools
+### 💬 My Philosophy
+> **"Pixels provide the vision, but logic builds the legacy."**
 
-Design: Adobe Photoshop, Canva
+---
 
-Dev Tools: Git & GitHub, VS Code, Composer, npm
+### 📬 Let's Connect
+* 🌐 **Portfolio:** [sujitc.com.np](https://sujitc.com.np)
+* 💼 **Working at:** Mohrain Websoft Pvt. Ltd.
+* ✉️ **Contact:** [Your Email Here]
 
-📂 Key Projects
-TravelSathi: A comprehensive tourism and trekking planning platform for the Nepal Himalayas.
-
-KTM Online Liquor: An e-commerce delivery solution with live location sharing and SEO optimization.
-
-NewsPik: A custom WordPress-based news and media portal.
-
-💬 My Philosophy
-"Pixels provide the vision, but logic builds the legacy."
-
-📬 Let's Connect
-🌐 Website: sujitc.com.np
-
-💼 Portfolio: Exploring new opportunities in Web & Mobile Dev.
+<p align="left">
+  <a href="https://github.com/sujitchy"><img src="https://img.shields.io/github/followers/sujitchy?label=Follow&style=social" alt="Follow"></a>
+</p>
