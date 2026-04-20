@@ -25,7 +25,7 @@ I am a passionate developer dedicated to building scalable web ecosystems and ex
 | **Frontend** | React.js, Tailwind CSS, Bootstrap, jQuery |
 | **Backend** | PHP, Laravel, WordPress (Custom Themes) |
 | **Mobile** | React Native, Flutter (Learning) |
-| **Database** | MySQL, Firebase |
+| **Database** | MySQL |
 | **Design** | Adobe Photoshop, Canva |
 | **Dev Ops** | Git, GitHub, VS Code, Composer, npm |
 
@@ -46,8 +46,7 @@ I am a passionate developer dedicated to building scalable web ecosystems and ex
 
 ### 📬 Let's Connect
 * 🌐 **Portfolio:** [sujitc.com.np](https://sujitc.com.np)
-* 💼 **Working at:** Mohrain Websoft Pvt. Ltd.
-* ✉️ **Contact:** [Your Email Here]
+* ✉️ **Contact:** sujitchy919@gmail.com
 
 <p align="left">
   <a href="https://github.com/sujitchy"><img src="https://img.shields.io/github/followers/sujitchy?label=Follow&style=social" alt="Follow"></a>
