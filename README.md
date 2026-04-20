@@ -1,22 +1,48 @@
-## Hi there 👋
+👋 Hi, I'm Sujit Chaudhary
+🎓 IT Professional | 💻 Full-Stack Web Developer | 📱 Mobile App Enthusiast
+🌏 Based in Dhangadhi, Nepal. Passionate about building scalable web ecosystems and exploring the intersection of design and functionality.
 
-# Portfolio Website
+🚀 About Me
+🎯 Specialization: Full-stack web development focusing on Laravel, PHP, and WordPress.
 
-A modern, responsive portfolio website built with HTML, Tailwind CSS, and JavaScript.
+⚡ Frontend & Design: Expert in crafting responsive UIs with Tailwind CSS and designing brand assets using Adobe Photoshop.
 
-## Features
+📱 Mobile Development: Actively building and learning cross-platform apps with React Native.
 
-- 📱 **Mobile-First Responsive Design**
-- 🚀 **Smooth Scroll Animations**
-- ⚡ **Modern UI with Tailwind CSS**
-- 🌐 **GitHub Pages Ready**
+💡 Interests: Interested in financial markets, stock analysis.
 
-## Live Demo
+🌱 Currently Learning: Advanced backend optimization and mobile environment architecture.
 
-[View Live Portfolio](https://sujitchy.github.io/sujitchy)
+🛠 Tech Stack
+Frontend & Mobile
 
-## Local Development
+Web: React.js, Tailwind CSS, Bootstrap, jQuery
 
-1. Clone the repository:
-```bash
-git clone https://github.com/sujitchy/sujitchy.git
+Mobile: React Native
+
+Backend & Database
+
+Languages/Frameworks: PHP, Laravel, WordPress (Custom Theme Development)
+
+Database: MySQL.
+
+Design & Tools
+
+Design: Adobe Photoshop, Canva
+
+Dev Tools: Git & GitHub, VS Code, Composer, npm
+
+📂 Key Projects
+TravelSathi: A comprehensive tourism and trekking planning platform for the Nepal Himalayas.
+
+KTM Online Liquor: An e-commerce delivery solution with live location sharing and SEO optimization.
+
+NewsPik: A custom WordPress-based news and media portal.
+
+💬 My Philosophy
+"Pixels provide the vision, but logic builds the legacy."
+
+📬 Let's Connect
+🌐 Website: sujitc.com.np
+
+💼 Portfolio: Exploring new opportunities in Web & Mobile Dev.
