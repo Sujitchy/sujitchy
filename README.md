@@ -46,7 +46,7 @@ I am a passionate developer dedicated to building scalable web ecosystems and ex
 
 ### 📬 Let's Connect
 * 🌐 **Portfolio:** [sujitc.com.np](https://sujitc.com.np)
-* 🔗 **LinkedIn:** [Sujit Chaudhary](www.linkedin.com/in/sujitc)
+* 🔗 **LinkedIn:** [Sujit Chaudhary](https://www.linkedin.com/in/sujitc/)
 * ✉️ **Contact:** sujitchy919@gmail.com
 
 <p align="left">
